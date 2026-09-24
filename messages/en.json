@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "programme": "Program",
+    "actions": "Actions",
+    "economie": "Economy",
+    "solidarite": "Solidarity",
+    "contact": "Contact"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp",
+    "contact": "Contact us",
+    "call": "Call"
+  },
+  "footer": {
+    "rights": "WI NOU KAPAB — Together, we can rebuild Haiti.",
+    "explore": "Explore",
+    "connect": "Reach us"
+  },
+  "lang": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "hint": "The form opens your email app (placeholder address)."
+  }
+}

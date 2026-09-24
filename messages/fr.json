@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "programme": "Programme",
+    "actions": "Actions",
+    "economie": "Économie",
+    "solidarite": "Solidarité",
+    "contact": "Contact"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp",
+    "contact": "Nous contacter",
+    "call": "Appeler"
+  },
+  "footer": {
+    "rights": "WI NOU KAPAB — Ensemble, nous pouvons reconstruire Haïti.",
+    "explore": "Explorer",
+    "connect": "Nous joindre"
+  },
+  "lang": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "form": {
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer",
+    "hint": "Le formulaire ouvre votre application email (adresse provisoire)."
+  }
+}
