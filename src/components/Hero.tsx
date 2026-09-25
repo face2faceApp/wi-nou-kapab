@@ -26,7 +26,7 @@ export function Hero({
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "58% 18%" }}
+          style={{ objectFit: "cover", objectPosition: "52% 32%" }}
         />
         <div className="hero-shade" />
       </div>
