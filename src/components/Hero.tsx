@@ -20,10 +20,18 @@ export function Hero({
   return (
     <section className="hero">
       <div className="hero-media">
-        <Image src={imageSrc} alt="" fill priority sizes="100vw" />
+        <Image
+          src={imageSrc}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "58% 18%" }}
+        />
         <div className="hero-shade" />
       </div>
-      <div className="container hero-content">
+      <div className="container">
+        <div className="hero-content">
         <h1 className="hero-brand">{brand}</h1>
         <p className="hero-lead">{lead}</p>
         <div className="hero-ctas">
@@ -31,6 +39,7 @@ export function Hero({
           <LocaleLink href="/contact" className="btn btn-ghost">
             {contactLabel}
           </LocaleLink>
+        </div>
         </div>
       </div>
     </section>

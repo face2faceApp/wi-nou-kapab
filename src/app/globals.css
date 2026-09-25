@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap");
-
 :root {
   --color-black: #0a0a0a;
   --color-red: #c8102e;
   --color-gold: #c5a028;
   --color-white: #ffffff;
-  --color-muted: #f4f1ec;
-  --font-display: "Source Serif 4", Georgia, serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --color-muted: #f2efe8;
+  --font-display: var(--font-display-loaded), "Source Serif 4", Georgia, serif;
+  --font-body: var(--font-body-loaded), "Source Sans 3", "Segoe UI", sans-serif;
   --max: 72rem;
   --header-h: 4.25rem;
 }
@@ -125,10 +123,15 @@ h3 {
 }
 
 .brand img {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-  border-radius: 0.2rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  background: #f7f4ee;
+  border-radius: 0.25rem;
+}
+
+.brand span {
+  white-space: nowrap;
 }
 
 .nav-main {
@@ -137,14 +140,32 @@ h3 {
   font-size: 0.95rem;
 }
 
+.nav-main a {
+  opacity: 0.88;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
 .nav-main a:hover {
   color: var(--color-gold);
+  opacity: 1;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.header-actions .btn-whatsapp {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header-actions .btn-whatsapp {
+    display: inline-flex;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+  }
 }
 
 .lang-switch {
@@ -178,15 +199,17 @@ h3 {
   align-items: end;
   color: var(--color-white);
   overflow: hidden;
-  animation: hero-in 0.7s ease both;
+  animation: hero-in 0.85s ease both;
 }
 
 @keyframes hero-in {
   from {
     opacity: 0;
+    transform: scale(1.02);
   }
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -199,42 +222,80 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 58% 18%;
 }
 
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.35) 0%,
-    rgba(10, 10, 10, 0.82) 70%
-  );
+  background:
+    linear-gradient(
+      105deg,
+      rgba(10, 10, 10, 0.78) 0%,
+      rgba(10, 10, 10, 0.45) 42%,
+      rgba(10, 10, 10, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.25) 0%,
+      rgba(10, 10, 10, 0.88) 78%
+    );
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 4rem 0 3.5rem;
+  padding: 5rem 0 3.75rem;
+  max-width: 38rem;
+  animation: copy-in 0.7s ease 0.15s both;
+}
+
+@keyframes copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-brand {
   font-family: var(--font-display);
   font-size: clamp(2.6rem, 8vw, 4.8rem);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.65rem;
   letter-spacing: 0.01em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+.hero-brand::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin-top: 0.85rem;
+  background: var(--color-gold);
 }
 
 .hero-lead {
   max-width: 34rem;
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.65rem;
   opacity: 0.95;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.hero-ctas .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 /* Pillars */
@@ -269,8 +330,14 @@ h3 {
 
 .pillar-list a {
   display: block;
-  padding-block: 0.5rem;
+  padding: 0.75rem 0 0.35rem;
   border-top: 3px solid var(--color-red);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pillar-list a:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
 }
 
 .pillar-list h3 {
@@ -286,14 +353,24 @@ h3 {
 
 /* Interior pages */
 .page-hero {
-  padding: 3rem 0 1.5rem;
-  background: var(--color-black);
+  padding: 3rem 0 1.75rem;
+  background:
+    linear-gradient(135deg, #0a0a0a 0%, #1a0a0e 55%, #2a0c12 100%);
   color: var(--color-white);
 }
 
 .page-hero h1 {
   margin: 0 0 0.75rem;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 3px;
+  margin-top: 0.75rem;
+  background: var(--color-gold);
 }
 
 .page-hero p {
