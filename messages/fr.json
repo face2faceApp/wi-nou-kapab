@@ -27,5 +27,8 @@
     "message": "Message",
     "submit": "Envoyer",
     "hint": "Le formulaire ouvre votre application email (adresse provisoire)."
+  },
+  "media": {
+    "aiImage": "Illustration générée par IA"
   }
 }

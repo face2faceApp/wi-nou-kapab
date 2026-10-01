@@ -21,4 +21,8 @@ for (const locale of ["fr", "en"] as const) {
 assert.ok(existsSync(resolve("public/logo-crest.jpg")));
 assert.ok(existsSync(resolve("public/hero.jpg")));
 
+for (const slug of ALL_SLUGS.filter((s) => s !== "home")) {
+  assert.ok(existsSync(resolve(`public/banners/${slug}.jpg`)), `banner ${slug}`);
+}
+
 console.log("smoke: all checks ok");

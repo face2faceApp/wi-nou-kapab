@@ -58,6 +58,7 @@ Rationale: matches stack preference; enough structure for i18n and routes; no CM
 - **Typography:** distinctive serif for brand/display; clean sans for body (not Inter/Roboto/Arial/system default stacks).
 - **Home hero:** one composition ù full-bleed photo, dominant brand name, one headline, one short line, CTA group (WhatsApp + Contact). No cards, stats, or overlays in the hero.
 - **Interior pages:** one job per section ù title, short lead, body from PDF (FR) / translation (EN).
+- **Interior page banners:** one AI-generated photo per page in `public/banners/<slug>.jpg` (Higgsfield), always captioned as AI-generated (messages `media.aiImage`, FR + EN). No real people, no party symbols, no text in the image.
 - **Motion:** 2ù3 subtle motions (e.g. hero fade-in, nav lang switch, CTA hover) ù presence, not noise.
 
 Avoid: purple gradients, cream+terracotta ùAI defaultù, broadsheet newspaper chrome, emoji decoration.
