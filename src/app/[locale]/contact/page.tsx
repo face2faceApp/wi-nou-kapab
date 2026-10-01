@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/ContactForm";
 import { CtaWhatsApp } from "@/components/CtaWhatsApp";
 import { CtaPhone } from "@/components/CtaPhone";
+import { PageHero } from "@/components/PageHero";
 import { getPage } from "@/lib/content";
 import { getMessages } from "@/i18n/messages";
 import { isLocale, type Locale } from "@/i18n/routing";
@@ -20,12 +21,7 @@ export default async function ContactPage({
 
   return (
     <>
-      <div className="page-hero">
-        <div className="container">
-          <h1>{page.title}</h1>
-          <p>{page.lead}</p>
-        </div>
-      </div>
+      <PageHero page={page} locale={locale} />
       <div className="container contact-grid">
         <div>
           <ContactForm labels={messages.form} />

@@ -27,5 +27,8 @@
     "message": "Message",
     "submit": "Send",
     "hint": "The form opens your email app (placeholder address)."
+  },
+  "media": {
+    "aiImage": "AI-generated illustration"
   }
 }

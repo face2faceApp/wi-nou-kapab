@@ -1,3 +1,4 @@
+import { PageHero } from "@/components/PageHero";
 import { ProgrammeSection } from "@/components/ProgrammeSection";
 import { getPage } from "@/lib/content";
 import { isLocale, type Locale } from "@/i18n/routing";
@@ -29,12 +30,7 @@ export default async function ContentPage({
 
   return (
     <>
-      <div className="page-hero">
-        <div className="container">
-          <h1>{page.title}</h1>
-          <p>{page.lead}</p>
-        </div>
-      </div>
+      <PageHero page={page} locale={locale} />
       <article className="prose">
         <div className="container">
           {page.blocks.map((b, i) => (
