@@ -23,7 +23,7 @@ Out of scope for v1: CMS, member auth, donations backend, Kreyùl locale, live ne
 
 ## 2. Approach
 
-**Next.js App Router + TypeScript + CSS variables**, static content from local files, deployable on Vercel.
+**Next.js App Router + TypeScript + CSS variables**, static content from local files, deployed on Railway (builds `main` on push).
 
 Rationale: matches stack preference; enough structure for i18n and routes; no CMS until content editors need it.
 
@@ -113,7 +113,7 @@ app/
 - [ ] WhatsApp and phone CTAs work on mobile
 - [ ] Contact form usable with placeholder email
 - [ ] Lighthouse-reasonable mobile layout (readable, no horizontal overflow)
-- [ ] Deploys as a standard Next.js app on Vercel
+- [ ] Deploys as a standard Next.js app on Railway
 
 ---
 
